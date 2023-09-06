@@ -2,7 +2,6 @@
 
 void	Contact::read_infos(void)
 {
-	
 	std::cout << "enter contact first name please.\n";
 	std::cin >> this->firstName;
 	std ::cout << "Enter contact last name please.\n";
