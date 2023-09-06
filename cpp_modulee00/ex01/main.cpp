@@ -18,17 +18,17 @@ int	main()
 	while (true)
 	{
 		read_command(command);
-		if (command == "EXIT")
-			return (0);
-		else if (command == "ADD")
-			phb.add_contact();
-		else if (command == "SEARCH")
-		{
-			phb.display_contacts();
-			int index;
-			std::cin >> index;
-			phb.display_contact(index);
-		}
+		// if (command == "EXIT")
+		// 	return (0);
+		// else if (command == "ADD")
+		// 	phb.add_contact();
+		// else if (command == "SEARCH")
+		// {
+		// 	phb.display_contacts();
+		// 	int index;
+		// 	std::cin >> index;
+		// 	phb.display_contact(index);
+		// }
 	}
 	
 }
