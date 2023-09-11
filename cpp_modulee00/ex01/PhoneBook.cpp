@@ -25,7 +25,8 @@ int	PhoneBook::get_contact_index() const
 {
 	std::string index;
 	std::cout << "\nPrint the index of a contact: ";
-	std::cin >> index;
+	if (!getline(std::cin, index))
+		exit(1);
 	if (!valid_index(index))
 	{
 		std::cerr << "Index is not valid.\n";

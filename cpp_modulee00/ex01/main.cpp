@@ -6,7 +6,8 @@ void	read_command(std::string &command)
 	{
 		std::cout << "\n::::::::::Please enter one of the following commands::::::::::\n";
 		std::cout << "\nEXIT\nADD\nSEARCH\n\n>";
-		std::cin >> command;
+		if (!getline(std::cin, command))
+			exit(1);
 	} while(command != "ADD" && command != "EXIT" && command != "SEARCH");
 }
 int	main(void)
@@ -21,12 +22,7 @@ int	main(void)
 		else if (command == "ADD")
 			phb.add_contact();
 		else if (command == "SEARCH")
-		{
 			phb.display_contacts();
-		// 	int index;z
-		// 	std::cin >> index;
-			// phb.display_contact(index);
-		}
 	}
 	
 }

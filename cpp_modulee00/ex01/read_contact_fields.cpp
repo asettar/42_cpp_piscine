@@ -3,27 +3,37 @@
 void	Contact::read_first_name(void)
 {
 	std::cout << "Enter contact first name: ";
-	std::cin >> firstName;
+	if (!getline(std::cin, firstName))
+		exit(1);
+
 }
 void	Contact::read_last_name(void)
 {
 	std::cout << "Enter contact last name: ";
-	std::cin >> lastName;
+	if (!getline(std::cin, lastName))
+		exit(1);
+
 }
 void	Contact::read_nick_name(void)
 {
 	std::cout << "Enter contact nick name: ";
-	std::cin >> nickName;
+	if (!getline(std::cin, nickName))
+		exit(1);
+
 }
 void	Contact::read_phone_number(void)
 {
 	std::cout << "Enter contact phone number: ";
-	std::cin >> phoneNumber;
+	if (!getline(std::cin, phoneNumber))
+		exit(1);
+
 }
 void	Contact::read_darkest_secret(void)
 {
 	std::cout << "Enter contact darkest secret: ";
-	std::cin >> darkest_secret;
+	if (!getline(std::cin, darkest_secret))
+		exit(1);
+
 }
 
 void	Contact::read_infos(void)
