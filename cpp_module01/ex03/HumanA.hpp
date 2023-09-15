@@ -7,6 +7,5 @@ private :
 	Weapon &weapon;
 public:
 	HumanA(std::string name, Weapon &weapon);
-	// HumanB(std::string name);
 	void	attack();
 };
