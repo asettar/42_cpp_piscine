@@ -1,0 +1,16 @@
+#include "Point.hpp"
+
+bool bsp( Point const a, Point const b, Point const c, Point const point)
+{
+	float	abc_area = Point::triangle_area(a, b, c);
+	float	apc_area = Point::triangle_area(a, point, c);
+	float	bpc_area = Point::triangle_area(b, point, c);
+	float	apb_area = Point::triangle_area(a, point, b);
+	if (!abc_area || !apc_area || !bpc_area)
+		return (false);
+	// std::cout << abc_area <<std::endl;
+	// std::cout << apc_area <<std::endl;
+	// std::cout << bpc_area <<std::endl;
+	// std::cout << apb_area <<std::endl;
+	return (apc_area + bpc_area + apb_area == abc_area);
+}
