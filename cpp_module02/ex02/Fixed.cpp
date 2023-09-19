@@ -38,7 +38,6 @@ void	Fixed::setRawBits(int const raw)
 float Fixed::toFloat(void) const
 {
 	float res = Fixed_point / (float)(1 << fractional_bits);
-	std::cout << Fixed_point << ' ' << res <<'\n';
 	return (res);
 }
 
@@ -79,22 +78,20 @@ bool	Fixed::operator != (Fixed const &a){
 	return (Fixed_point != a.Fixed_point);
 }
 
-int	Fixed::operator + (Fixed const &a){
-	return (Fixed_point + a.Fixed_point);
+float	Fixed::operator + (Fixed const &a){
+	return (this->toFloat() + a.toFloat());
 }
 
-int	Fixed::operator - (Fixed const &a){
-	return (Fixed_point - a.Fixed_point);
+float	Fixed::operator - (Fixed const &a){
+	return (this->toFloat() - a.toFloat());
 }
 
 float	Fixed::operator * (Fixed const &a){
-	float f1 = Fixed_point / (float)(1 << fractional_bits);
-	float f2 = a.Fixed_point / (float)(1 << fractional_bits);
-	return (f1 * f2);
+	return (this->toFloat() * a.toFloat());
 }
 
-int	Fixed::operator / (Fixed const &a){
-	return (Fixed_point / a.Fixed_point);
+float	Fixed::operator / (Fixed const &a){
+	return (this->toFloat() / a.toFloat());
 }
 
 Fixed const& Fixed::max(Fixed const &a, Fixed const &b){
