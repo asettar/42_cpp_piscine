@@ -3,10 +3,10 @@
 void	Contact::print_contact_fields(void) const
 {
 	std::cout << "first name : " << firstName << std::endl;
-	std::cout << " last name : " << lastName << std::endl;
-	std::cout << " nick name : " << nickName << std::endl;
-	std::cout << " phone number : " << phoneNumber << std::endl;
-	std::cout << " darkest secret : " << darkest_secret << std::endl;
+	std::cout << "last name : " << lastName << std::endl;
+	std::cout << "nick name : " << nickName << std::endl;
+	std::cout << "phone number : " << phoneNumber << std::endl;
+	std::cout << "darkest secret : " << darkest_secret << std::endl;
 }
 
 std::string	Contact::print_string(std::string s) const

@@ -30,7 +30,7 @@ int	PhoneBook::get_contact_index() const
 	if (!valid_index(index))
 	{
 		std::cerr << "Index is not valid.\n";
-		std::cerr << "the index must contain only one digit with no trailing zeros and between 1 and " << number_of_contacts << ".\n";
+		std::cerr << "the index must contain only one digit with no leading zeros and between 1 and " << number_of_contacts << ".\n";
 		return (-1);
 	}
 	return (index[0] - '0' - 1);

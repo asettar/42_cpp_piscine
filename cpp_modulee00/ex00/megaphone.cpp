@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cctype>
+#include <string>
 
 int	main(int ac, char **av)
 {
@@ -9,11 +9,9 @@ int	main(int ac, char **av)
 	{
 		for(int i = 1; av[i]; i++)
 		{
-			for(int j=0; av[i][j]; j++)
-			{
-				std::cout << (char)toupper(av[i][j]);
-
-			}
+			std::string s = av[i];
+			for(int j=0; j < (int)s.size(); j++)
+				std::cout << (char)std::toupper(s[j]);
 		}
 	}
 }

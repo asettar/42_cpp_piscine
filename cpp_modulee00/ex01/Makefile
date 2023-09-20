@@ -1,4 +1,4 @@
-CC = g++
+CC = clang++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 HEADERS = Contact.hpp PhoneBook.hpp
 SRCS = main.cpp PhoneBook.cpp Contact.cpp read_contact_fields.cpp
