@@ -8,7 +8,7 @@ NAME = phonebook
 all : $(NAME)
 $(NAME) : $(OBJS)
 	$(CC) $(CPPFLAGS) $^ -o $@
-%o : %c $(HEADERS)
+%.o : %.cpp $(HEADERS)
 	$(CC) $(CPPFLAGS) -c $< -o $@
 clean :
 	rm -f $(OBJS)
