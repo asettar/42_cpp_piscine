@@ -26,7 +26,7 @@
 		"array": "cpp",
 		"atomic": "cpp",
 		"bit": "cpp",
-		"cctype": "cpp",
+		"CXXtype": "cpp",
 		"chrono": "cpp",
 		"cmath": "cpp",
 		"complex": "cpp",
@@ -60,6 +60,14 @@
 		"typeinfo": "cpp",
 		"unordered_map": "cpp",
 		"vector": "cpp",
-		"iomanip": "cpp"
+		"iomanip": "cpp",
+		"harl.hpp": "c",
+		"deque": "cpp",
+		"fstream": "cpp",
+		"stack": "cpp",
+		"__functional_03": "cpp",
+		"memory_resource": "cpp",
+		"filesystem": "cpp",
+		"cctype": "cpp"
 	}
 }

@@ -1,4 +1,4 @@
-CC = clang++
+CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 HEADERS = Contact.hpp PhoneBook.hpp
 SRCS = main.cpp PhoneBook.cpp Contact.cpp read_contact_fields.cpp
@@ -7,9 +7,9 @@ NAME = phonebook
 
 all : $(NAME)
 $(NAME) : $(OBJS)
-	$(CC) $(CPPFLAGS) $^ -o $@
+	$(CXX) $(CPPFLAGS) $^ -o $@
 %.o : %.cpp $(HEADERS)
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 clean :
 	rm -f $(OBJS)
 fclean : clean

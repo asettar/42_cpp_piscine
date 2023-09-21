@@ -19,7 +19,7 @@
 		"atomic": "cpp",
 		"bit": "cpp",
 		"bitset": "cpp",
-		"cctype": "cpp",
+		"CXXtype": "cpp",
 		"chrono": "cpp",
 		"cmath": "cpp",
 		"complex": "cpp",

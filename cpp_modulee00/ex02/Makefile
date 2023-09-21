@@ -1,15 +1,15 @@
-CC = g++
+CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-HEADERS = Account.hpp 
-SRCS = tests.cpp  Account.cpp
+HEADERS = ACXXount.hpp 
+SRCS = tests.cpp  ACXXount.cpp
 OBJS = $(SRCS:.cpp=.o)
-NAME = accounts
+NAME = aCXXounts
 
 all : $(NAME)
 $(NAME) : $(OBJS)
-	$(CC) $(CPPFLAGS) $^ -o $@
+	$(CXX) $(CPPFLAGS) $^ -o $@
 %.o : %.cpp $(HEADERS)
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 clean :
 	rm -f $(OBJS)
 fclean : clean
