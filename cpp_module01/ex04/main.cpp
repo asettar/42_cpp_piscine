@@ -6,8 +6,9 @@ std::string	replace_occurences(std::string &line, std::string &s1, std::string &
 	int start = 0;
 	std::string new_line;
 
-	// abc    start=0, index=1
-	while(index != -1)
+	if (s1.empty())
+		return (line);
+	while (index != -1)
 	{
 		new_line += line.substr(start, index - start);
 		new_line += s2;
@@ -15,7 +16,7 @@ std::string	replace_occurences(std::string &line, std::string &s1, std::string &
 		index = line.find(s1, start);
 	}
 	new_line += line.substr(start);
-	return new_line;
+	return (new_line);
 }
 
 int main(int ac, char **av)
@@ -44,12 +45,9 @@ int main(int ac, char **av)
 	std::string line;
 	std::string s1(av[2]);
 	std::string s2(av[3]);
-	while(std::getline(input_file, line))
-	{
-		line += '\n';
-		line = replace_occurences(line, s1, s2);
-		output_file << line;
-	}
+	std::getline(input_file, line, '\0');
+	line = replace_occurences(line, s1, s2);
+	output_file << line;
 	input_file.close();
 	output_file.close();
 }
