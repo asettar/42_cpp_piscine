@@ -1,4 +1,4 @@
-CC = g++
+CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 HEADERS = Contact.hpp PhoneBook.hpp
 SRCS = main.cpp
@@ -7,9 +7,9 @@ NAME = stringreplace
 
 all : $(NAME)
 $(NAME) : $(OBJS)
-	$(CC) $(CPPFLAGS) $^ -o $@
-%o : %c
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) $^ -o $@
+%.o : %.cpp
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 clean :
 	rm -f $(OBJS)
 fclean : clean

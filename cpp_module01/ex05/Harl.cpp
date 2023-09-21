@@ -25,7 +25,7 @@ void	Harl::warning(void)
 void	Harl::error(void)
 {
 	std::cout << "[ ERROR ]\n";
-	std::cout << "This is unacceptable!\n";
+	std::cout << "This is unaCXXeptable!\n";
 	std::cout << "I want to speak to the manager now.\n\n";
 }
 
@@ -34,9 +34,8 @@ void	Harl::complain(std::string level)
 	(void)level;
 	std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	void	(Harl::*fun_ptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	for(int i = 0; i < 4; i++)
-	{
-		if (levels[i] == level)
-			(this->*fun_ptr[i])();
-	}
+	int index = (level == levels[0]) + 2 * (level == levels[1])
+				+ 3 * (level == levels[2]) + 4 * (level == levels[3]);
+	if (index)
+		(this->*fun_ptr[index - 1])();
 }

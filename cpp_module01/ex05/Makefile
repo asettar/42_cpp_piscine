@@ -1,4 +1,4 @@
-CC = g++
+CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 HEADERS = Harl.hpp
 SRCS = main.cpp Harl.cpp
@@ -7,9 +7,9 @@ NAME = harl
 
 all : $(NAME)
 $(NAME) : $(OBJS)
-	$(CC) $(CPPFLAGS) $^ -o $@
-%o : %c
-	$(CC) $(CPPFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) $^ -o $@
+%.o : %.cpp $(HEADERS)
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 clean :
 	rm -f $(OBJS)
 fclean : clean

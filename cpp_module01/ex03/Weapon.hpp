@@ -13,4 +13,4 @@ public :
 	void setType(std::string type_name);
 };
 
-#endif       
+#endif   

@@ -10,5 +10,4 @@ int main(){
 		std::cout << i << ": ";
 		zombies[i].annouce();
 	}
-	delete[] zombies;
 }

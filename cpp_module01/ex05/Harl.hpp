@@ -1,3 +1,6 @@
+#ifndef HARL_HPP
+#define HARL_HPP
+
 #include <iostream>
 
 class Harl
@@ -11,8 +14,6 @@ private:
 public:
 	Harl(void);
 	void	complain(std::string level);
-	void	display(std::string s){
-		std::cout <<s << std::endl;
-	}
 };
 
+#endif
