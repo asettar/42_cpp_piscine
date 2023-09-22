@@ -1,7 +1,7 @@
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-HEADERS = Zombie.hpp
-SRCS = main.cpp Fixed.cpp 
+HEADERS = Fixed.hpp
+SRCS = main.cpp Fixed.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = fixedpoint
 
@@ -15,3 +15,4 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 re : fclean all
+.PHONY : all clean fclean re

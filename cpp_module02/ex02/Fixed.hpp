@@ -1,3 +1,6 @@
+#ifndef FIXED_HPP
+#define FIXED_HPP
+
 #include <iostream>
 #include <cmath>
 
@@ -11,21 +14,21 @@ public:
 	Fixed(const int n);
 	Fixed(const float n);
 	Fixed(Fixed const &other);
+	Fixed&	operator = (Fixed const &other);
 	int 	getRawBits(void) const;
 	void	setRawBits( int const raw );
 	float	toFloat(void) const;
 	int		toInt(void) const;
-	Fixed&	operator = (Fixed const &other);
-	bool	operator < (Fixed const &a);
-	bool	operator > (Fixed const &a);
-	bool	operator >= (Fixed const &a);
-	bool	operator <= (Fixed const &a);
-	bool	operator == (Fixed const &a);
-	bool	operator != (Fixed const &a);
-	float	operator + (Fixed const &a);
-	float	operator - (Fixed const &a);
-	float	operator * (Fixed const &a);
-	float	operator / (Fixed const &a);
+	bool	operator < (Fixed const &a) const;
+	bool	operator > (Fixed const &a) const;
+	bool	operator >= (Fixed const &a) const;
+	bool	operator <= (Fixed const &a) const;
+	bool	operator == (Fixed const &a) const;
+	bool	operator != (Fixed const &a) const;
+	float	operator + (Fixed const &a) const;
+	float	operator - (Fixed const &a) const;
+	float	operator * (Fixed const &a) const;
+	float	operator / (Fixed const &a) const;
 	Fixed	operator ++ (void);
 	Fixed	operator ++ (int);
 	Fixed	operator -- (void);
@@ -39,3 +42,4 @@ public:
 };
 
 std::ostream& operator<<(std::ostream& os, const Fixed & F);
+#endif

@@ -1,6 +1,6 @@
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-HEADERS = Fixed.hpp
+HEADERS = Fixed.hpp Point.hpp
 SRCS = main.cpp Fixed.cpp bsp.cpp Point.cpp
 OBJS = $(SRCS:.cpp=.o)
 NAME = bsp
@@ -15,3 +15,4 @@ clean :
 fclean : clean
 	rm -f $(NAME)
 re : fclean all
+.PHONY : all clean fclean re

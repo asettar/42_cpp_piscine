@@ -10,6 +10,7 @@ Fixed::Fixed(Fixed const &other){
 	*this = other;
 }
 
+
 Fixed& Fixed::operator = (Fixed const &other)
 {
 	std::cout << "Copy assignement operator called\n";

@@ -17,7 +17,7 @@ float Point::triangle_area(Point const &a, Point const &b, Point const &c)
 	return (res);
 }
 
-Point::Point(void) : x(0), y(0) {
+Point::Point(void) : x(Fixed()), y(Fixed()) {
 }
 
 Point::Point(float const &a, float const &b) : x(Fixed(a)), y(Fixed(b)){

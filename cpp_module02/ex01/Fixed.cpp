@@ -21,6 +21,14 @@ Fixed::Fixed(Fixed const &other){
 	*this = other;
 }
 
+Fixed& Fixed::operator = (Fixed const &other)
+{
+	std::cout << "Copy assignement operator called\n";
+	this->Fixed_point = other.Fixed_point;
+	return (*this);
+}
+
+
 int	Fixed::getRawBits(void) const
 {
 	std::cout << "getRawBits member function called\n";
@@ -43,16 +51,6 @@ int	Fixed::toInt(void) const
 {
 	return (Fixed_point >> fractional_bits);
 }
-
-
-Fixed& Fixed::operator = (Fixed const &other)
-{
-	std::cout << "Copy assignement operator called\n";
-	this->Fixed_point = other.Fixed_point;
-	return (*this);
-}
-
-
 
 Fixed::~Fixed(void)
 {

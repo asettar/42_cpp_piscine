@@ -35,6 +35,12 @@ void	Fixed::setRawBits(int const raw)
 	this->Fixed_point = raw;
 }
 
+Fixed& Fixed::operator = (Fixed const &other){
+	// std::cout << "Copy assignement operator called\n";
+	this->Fixed_point = other.Fixed_point;
+	return (*this);
+}
+
 float Fixed::toFloat(void) const
 {
 	float res = Fixed_point / (float)(1 << fractional_bits);
@@ -47,50 +53,43 @@ int	Fixed::toInt(void) const
 }
 
 
-Fixed& Fixed::operator = (Fixed const &other){
-	// std::cout << "Copy assignement operator called\n";
-	this->Fixed_point = other.Fixed_point;
-	return (*this);
-}
-
-
-bool	Fixed::operator < (Fixed const &a){
+bool	Fixed::operator < (Fixed const &a) const{
 	return (Fixed_point < a.Fixed_point);
 }
 
-bool	Fixed::operator > (Fixed const &a){
+bool	Fixed::operator > (Fixed const &a) const{
 	return (Fixed_point > a.Fixed_point);
 }
 
-bool	Fixed::operator >= (Fixed const &a){
+bool	Fixed::operator >= (Fixed const &a) const{
 	return (Fixed_point >= a.Fixed_point);
 }
 
-bool	Fixed::operator <= (Fixed const &a){
+bool	Fixed::operator <= (Fixed const &a) const{
 	return (Fixed_point <= a.Fixed_point);
 }
 
-bool	Fixed::operator == (Fixed const &a){
+bool	Fixed::operator == (Fixed const &a) const{
 	return (Fixed_point == a.Fixed_point);
 }
 
-bool	Fixed::operator != (Fixed const &a){
+bool	Fixed::operator != (Fixed const &a) const{
 	return (Fixed_point != a.Fixed_point);
 }
 
-float	Fixed::operator + (Fixed const &a){
+float	Fixed::operator + (Fixed const &a) const{
 	return (this->toFloat() + a.toFloat());
 }
 
-float	Fixed::operator - (Fixed const &a){
+float	Fixed::operator - (Fixed const &a) const{
 	return (this->toFloat() - a.toFloat());
 }
 
-float	Fixed::operator * (Fixed const &a){
+float	Fixed::operator * (Fixed const &a) const{
 	return (this->toFloat() * a.toFloat());
 }
 
-float	Fixed::operator / (Fixed const &a){
+float	Fixed::operator / (Fixed const &a) const{
 	return (this->toFloat() / a.toFloat());
 }
 
