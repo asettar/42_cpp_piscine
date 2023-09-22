@@ -6,5 +6,9 @@ int main(){
 	Point c(3.5, 0.9f);
 	Point point(2.3f, 1.6f);
 	std::cout << bsp(a, b, c, point) << std::endl;
+	Point d(a);
+	std::cout << bsp(a, b, d, point) << std::endl;
+	Point e = b;
+	std::cout << bsp(e, d, c, point) << std::endl;
 }
 
