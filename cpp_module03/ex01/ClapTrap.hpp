@@ -13,7 +13,7 @@ protected:
 	long long	attackDamage;
 	
 public :
-	ClapTrap(void);
+	ClapTrap( void );
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &other);
 	ClapTrap& operator = (ClapTrap const &other);
@@ -24,4 +24,3 @@ public :
 };
 
 #endif
-
