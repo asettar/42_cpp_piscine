@@ -8,9 +8,5 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 	float	apb_area = Point::triangle_area(a, point, b);
 	if (!abc_area || !apc_area || !bpc_area)
 		return (false);
-	// std::cout << abc_area <<std::endl;
-	// std::cout << apc_area <<std::endl;
-	// std::cout << bpc_area <<std::endl;
-	// std::cout << apb_area <<std::endl;
 	return (apc_area + bpc_area + apb_area == abc_area);
 }
