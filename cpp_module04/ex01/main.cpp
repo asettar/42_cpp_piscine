@@ -3,17 +3,19 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << meta->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	std::cout << j->getType() << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+	Animal *animals[10];
+	for(int i = 0; i < 5; i++)
+		animals[i] = new Cat();
+	for(int i = 5; i < 10; i++)
+		animals[i] = new Dog();
+	
+	for(int i = 0; i < 10; i++)
+		delete animals[i];
 
-	delete meta;
-	delete i;
-	delete j;
+	// test deep copy
+	Cat cat_a;
+	Cat cat_b = cat_a;
+	cat_a.setIdea(0, "changed");
+	std::cout << cat_a.getIdea(0) << std::endl;
+	std::cout << cat_b.getIdea(0) << std::endl;
 }

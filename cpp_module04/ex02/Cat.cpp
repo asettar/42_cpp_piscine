@@ -30,6 +30,7 @@ void Cat::makeSound() const
 {
 	std::cout << "Cat :: Meeeeooooow Meeeoow\n";
 }
+
 Cat::~Cat()
 {
 	std::cout << "Cat Destructor called\n";

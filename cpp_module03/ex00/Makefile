@@ -1,7 +1,7 @@
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 HEADERS = ClapTrap.hpp 
-SRCS = main.cpp ClapTrap.cpp fragTrap.cpp
+SRCS = main.cpp ClapTrap.cpp 
 OBJS = $(SRCS:.cpp=.o)
 NAME = fragTrap
 
