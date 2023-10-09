@@ -10,12 +10,25 @@ AMateria::AMateria(std::string const & type)
 	this->type = type;
 }
 
+AMateria::AMateria(const AMateria &other){
+	(void)other;
+}
+
+AMateria& ::AMateria::operator = (const AMateria &other)
+{
+	(void)other;
+	return (*this);
+}
+
 std::string const & AMateria::getType() const
 {
 	return (this->type);
 }
 
-// void	AMateria::use(ICharacter& target)
-// {
+AMateria::~AMateria(void) {}
 
-// }
+
+void	AMateria::use(ICharacter& target)
+{
+
+}

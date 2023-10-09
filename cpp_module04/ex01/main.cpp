@@ -18,4 +18,8 @@ int main()
 	cat_a.setIdea(0, "changed");
 	std::cout << cat_a.getIdea(0) << std::endl;
 	std::cout << cat_b.getIdea(0) << std::endl;
+	Cat cat_c;
+	cat_a = cat_c;
+	while(1){};
+
 }

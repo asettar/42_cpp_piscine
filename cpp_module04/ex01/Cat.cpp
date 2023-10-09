@@ -10,11 +10,13 @@ Cat::Cat( void )
 Cat::Cat(const Cat &other)
 {
 	std::cout << "Cat Copy contructor called\n";
+	this->brain = new Brain();
 	*this = other;
 }
 Cat& Cat::operator = (const Cat &other)
 {
 	this->type = other.type;
+	delete brain;
 	this->brain = new Brain();
 	for(int i = 0; i < size; i++)
 		this->brain->ideas[i] = other.brain->ideas[i];
