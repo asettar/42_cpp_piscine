@@ -24,7 +24,7 @@ Character & Character::operator = (const Character &other)
 	for(int i = 0; i < 4; i++)
 	{
 		delete inventory[i];
-		inventory[i] = other.inventory[i];
+		inventory[i] = other.inventory[i]->clone();
 	}
 	name = other.name;
 	return (*this);

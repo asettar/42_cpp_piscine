@@ -3,6 +3,7 @@
 
 Brain::Brain()
 {
+	std::cout << "Brain constructor called\n";
 	for(int i = 0; i < size; i++)
 		this->ideas[i] = "default";
 }
@@ -26,4 +27,5 @@ Brain& Brain::operator = (const Brain &other)
 
 Brain::~Brain()
 {
+	std::cout << "Brain destructor called\n";
 }
