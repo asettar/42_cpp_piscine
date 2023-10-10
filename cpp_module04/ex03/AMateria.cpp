@@ -30,5 +30,6 @@ AMateria::~AMateria(void) {}
 
 void	AMateria::use(ICharacter& target)
 {
-
+	(void)target;
+	std::cout << "AMateria use \n";
 }

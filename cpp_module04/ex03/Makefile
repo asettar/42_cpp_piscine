@@ -1,9 +1,10 @@
 CXX = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
-HEADERS = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
-SRCS = main.cpp Dog.cpp Cat.cpp Animal.cpp Brain.cpp
+HEADERS = Cure.hpp Ice.hpp AMateria.hpp ICharacter.hpp \
+			IMateriaSource.hpp MateriaSource.hpp Character.hpp
+SRCS = main.cpp Cure.cpp Ice.cpp AMateria.cpp  MateriaSource.cpp Character.cpp
 OBJS = $(SRCS:.cpp=.o)
-NAME = brain
+NAME = amateria
 
 all : $(NAME)
 $(NAME) : $(OBJS)

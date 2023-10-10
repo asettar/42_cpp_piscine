@@ -20,6 +20,6 @@ int main()
 	std::cout << cat_b.getIdea(0) << std::endl;
 	Cat cat_c;
 	cat_a = cat_c;
-	while(1){};
+	// while(1){};
 
 }
